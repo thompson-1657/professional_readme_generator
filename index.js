@@ -32,7 +32,7 @@ inquirer
             type: "list",
             message: "What license did you use?",
             name: "license",
-            choices: ['MIT License', ' Apache License', 'BSD License', 'GNU License', 'GPL License', 'N/A'],
+            choices: ['MIT License', 'Apache License', 'BSD License', 'GNU License', 'GPL License', 'N/A'],
             validate: (value) => { if (value) { return true } else { return `I need a value to continue` } },
         },
         {
@@ -79,5 +79,14 @@ inquirer
         GitHub: ${gitHub}
         Email: ${email}`;
 
-
+        createNewFile(title, template);
     })
+
+function createNewFile(fileName, data) {
+    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log(`Your README has been generated.`);
+    })
+}
