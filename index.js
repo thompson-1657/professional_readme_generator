@@ -1,5 +1,6 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
+const { pathToFileURL } = require("url")
 
 inquirer
     .prompt([
@@ -49,8 +50,19 @@ inquirer
         },
         {
             type: "input",
+            message: "If you have a license what is the relative file path to your license?",
+            name: "pathToLicense",
+        },
+        {
+            type: "input",
             message: "What is your GitHub username?",
             name: "gitHub",
+            validate: (value) => { if (value) { return true } else { return `I need a value to continue` } },
+        },
+        {
+            type: "input",
+            message: "What is the URL to your GitHub profile?",
+            name: "linkToGitHub",
             validate: (value) => { if (value) { return true } else { return `I need a value to continue` } },
         },
         {
@@ -68,15 +80,19 @@ inquirer
         credits,
         license,
         gitHub,
+        linkToGitHub,
         email,
-        contribution
+        contribution,
+        pathToLicense
 
     }) => {
         const template = `# ${title}
 ## Description
+---
 ${description}
+
 ## Table of Contents
-        
+---
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -86,19 +102,31 @@ ${description}
 * [Questions](#questions)
         
 ## Installation
+---
 ${installation}
         
 ## Usage
+---
 ${usage}
+
+## Contribution
+---
+${contribution}
         
 ## Credits
+---
 ${credits}
         
 ## License
-${license}
+---
+[${license}](${pathToLicense})
         
-# Questions
-GitHub: ${gitHub}
+## Questions
+---
+If you have any questions regarding the functionality or use of this application feel free to contact me via the information below.
+
+GitHub: [${gitHub}](${linkToGitHub})
+
 Email: ${email}`;
 
         createNewFile(title, template);
