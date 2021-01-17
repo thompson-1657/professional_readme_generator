@@ -42,6 +42,12 @@ inquirer
 
         },
         {
+            type: "input",
+            message: "What types of tests did you run on your application?",
+            name: "tests",
+            validate: (value) => { if (value) { return true } else { return `I need a value to continue` } },
+        },
+        {
             type: "list",
             message: "What license did you use?",
             name: "license",
@@ -52,6 +58,11 @@ inquirer
             type: "input",
             message: "If you have a license what is the relative file path to your license?",
             name: "pathToLicense",
+        },
+        {
+            type: "input",
+            message: "Please include a badge link to your selected license.",
+            name: "badge",
         },
         {
             type: "input",
@@ -82,11 +93,15 @@ inquirer
         gitHub,
         linkToGitHub,
         email,
-        contribution,
-        pathToLicense
+        contributing,
+        pathToLicense,
+        tests,
+        badge
 
     }) => {
         const template = `# ${title}
+${badge}
+
 ## Description
 ---
 ${description}
@@ -96,9 +111,10 @@ ${description}
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Tests](#tests)
 * [Credits](#credits)
 * [License](#license)
-* [Contribution](#contribution)
+* [Contributing](#contributing)
 * [Questions](#questions)
         
 ## Installation
@@ -109,9 +125,13 @@ ${installation}
 ---
 ${usage}
 
-## Contribution
+## Tests
 ---
-${contribution}
+${tests}
+
+## Contributing
+---
+${contributing}
         
 ## Credits
 ---
