@@ -100,7 +100,7 @@ inquirer
 
     }) => {
         const template = `# ${title}
-[${badge}](pathToLicense)
+${badge}
 
 ## Description
 ---
