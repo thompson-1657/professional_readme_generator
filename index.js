@@ -11,6 +11,12 @@ inquirer
         },
         {
             type: "input",
+            message: "What is the description of your application?",
+            name: "description",
+            validate: (value) => { if (value) { return true } else { return `I need a value to continue` } },
+        },
+        {
+            type: "input",
             message: "How do you install your application?",
             name: "installation",
             validate: (value) => { if (value) { return true } else { return `I need a value to continue` } },
@@ -26,6 +32,12 @@ inquirer
             type: "input",
             message: "List your collaborators, if any, with links to their GitHub profiles.",
             name: "credits",
+
+        },
+        {
+            type: "input",
+            message: "How can people contribute to your application?",
+            name: "contribution",
 
         },
         {
@@ -50,6 +62,7 @@ inquirer
 
     ]).then(({
         title,
+        description,
         installation,
         usage,
         credits,
@@ -60,24 +73,33 @@ inquirer
 
     }) => {
         const template = `# ${title}
-        *[Installation](#installation)
-        *[Usage](#usage)
-        * [Credits](#credits)
-        * [License](#license)
-        * [GitHub](#github)
-        * [Email](#email)
-        * [Contribution](#contribution)
-        ## Installation
-        ${installation}
-        ## Usage
-        ${usage}
-        ## Credits
-        ${credits}
-        ## License
-        ${license}
-        # Contact
-        GitHub: ${gitHub}
-        Email: ${email}`;
+## Description
+${description}
+## Table of Contents
+        
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Contribution](#contribution)
+* [Questions](#questions)
+        
+## Installation
+${installation}
+        
+## Usage
+${usage}
+        
+## Credits
+${credits}
+        
+## License
+${license}
+        
+# Questions
+GitHub: ${gitHub}
+Email: ${email}`;
 
         createNewFile(title, template);
     })
