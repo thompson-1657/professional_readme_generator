@@ -1,6 +1,6 @@
 # Professional readme generator
 
-![GitHub](https://img.shields.io/github/license/thompson-1657/professional_readme_generator?color=%230288d1)
+[![GitHub](https://img.shields.io/github/license/thompson-1657/professional_readme_generator?color=%230288d1)](LICENSE)
 	
 ## Description
 ---
