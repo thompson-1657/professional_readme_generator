@@ -60,11 +60,24 @@ inquirer
 
     }) => {
         const template = `# ${title}
-        *[Installation]
-        *[Usage]
-        * [Credits]
-        * [License]
-        * [GitHub]
-        * [Email]
-        * [Contribution]`
+        *[Installation](#installation)
+        *[Usage](#usage)
+        * [Credits](#credits)
+        * [License](#license)
+        * [GitHub](#github)
+        * [Email](#email)
+        * [Contribution](#contribution)
+        ## Installation
+        ${installation}
+        ## Usage
+        ${usage}
+        ## Credits
+        ${credits}
+        ## License
+        ${license}
+        # Contact
+        GitHub: ${gitHub}
+        Email: ${email}`;
+
+
     })
