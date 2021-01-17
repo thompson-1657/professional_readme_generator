@@ -32,7 +32,10 @@ In the terminal the user can answer questions in the command line about their ap
         
 ## Usage
 ---
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1wLYlOfdDxs7XiaifiMT_suBYOgenKzoG/view?usp=sharing" title="professional_readme_generator"></iframe>
+
+[![recording](https://user-images.githubusercontent.com/71091515/104857828-c1117f00-58e0-11eb-9daa-9bda141f44f5.gif)](https://drive.google.com/file/d/1wLYlOfdDxs7XiaifiMT_suBYOgenKzoG/view?usp=sharing)
+Click the gif above to see the entire video of how to use the application.
+
 
 ## Technologies
 ---
