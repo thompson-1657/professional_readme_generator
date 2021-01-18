@@ -33,9 +33,8 @@ In the terminal the user can answer questions in the command line about their ap
 ## Usage
 ---
 
-[![recording](https://user-images.githubusercontent.com/71091515/104857828-c1117f00-58e0-11eb-9daa-9bda141f44f5.gif)](https://drive.google.com/file/d/1wLYlOfdDxs7XiaifiMT_suBYOgenKzoG/view?usp=sharing)
+[![recording](https://user-images.githubusercontent.com/71091515/104857828-c1117f00-58e0-11eb-9daa-9bda141f44f5.gif)](https://drive.google.com/file/d/1HX4UAaAgmdH81M_DEdxMMdOwBB_UR3xL/view)
 Click the gif above to see the entire video of how to use the application.
-
 
 ## Technologies
 ---
