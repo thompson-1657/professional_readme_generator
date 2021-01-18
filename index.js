@@ -38,7 +38,7 @@ inquirer
         {
             type: "input",
             message: "How can people contribute to your application?",
-            name: "contribution",
+            name: "contributing",
 
         },
         {
