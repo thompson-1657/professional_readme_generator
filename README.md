@@ -26,7 +26,7 @@ run npm install
 ```
 in the terminal to install the npm package dependency,   [inquirer](https://www.npmjs.com/package/inquirer). The application itself can then be run in the terminal by invoking 
 ```
-node index.js.
+node index.js
 ```
 In the terminal the user can answer questions in the command line about their application. Once all questions are answered a custom professional readme file with the title of the project will be generated automatically.
         
